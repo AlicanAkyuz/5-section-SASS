@@ -1,0 +1,466 @@
+@import "./_mixins";
+@import "./variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include customWidthHeight(100vw, 4759px);
+  @include zeroMarginPadding();
+}
+#nav-box {
+  @include customWidthHeight(100%, 87.94px);
+  @include flexCenterSet();
+  position: fixed;
+  top: 0;
+  .nav-web {
+    @include customWidthHeight($content-web-width, 87.94px);
+    @include flexCenterSet();
+    border-bottom: 1px solid #828282;
+    background-color: $primary-background-color;
+    ul {
+      @include customWidthHeight(100%, 100%);
+      @include zeroMarginPadding();
+      @include flexCustom(row, center, space-between);
+      list-style-type: none;
+      a {
+        @include links();
+      }
+      a:active {
+        color: $primary-text-color;
+      }
+      .home-link {
+        color: $primary-text-color;
+        font-weight: 700;
+      }
+    }
+  }
+  .nav-mobile {
+    display: none;
+    @include customWidthHeight(70px, 75px);
+    border: 1px solid #e0e0e0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 7px;
+    ul {
+      position: absolute;
+      top: -250px;
+    }
+    hr {
+      margin-top: 17px;
+    }
+    #toggle {
+      position: absolute;
+      appearance: none;
+      cursor: pointer;
+    }
+    #toggle + label:after {
+      content: none;
+    }
+    #toggle:checked ~ ul {
+      @include customWidthHeight(150px, 200px);
+      @include zeroMarginPadding();
+      @include flexCustom(column, center, space-between);
+      transition: margin 700ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      text-align: center;
+      list-style-type: none;
+      background-color: $primary-background-color;
+      top: 25px;
+      left: 60px;
+      li {
+        @include customWidthHeight(100px, 20px);
+        padding: 10px;
+        background-color: $primary-background-color;
+        a {
+          @include links();
+        }
+        .home-link {
+          color: $primary-text-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+#navbar-landing {
+  @include customWidthHeight(100%, 87.94px);
+  transition: all 0.5s ease-in-out;
+}
+
+#titles {
+  @include titles();
+}
+
+#home {
+  @include customWidthHeight(100%, 768px);
+  background-color: $primary-background-color;
+  #home-holder {
+    @include customWidthHeight(100%, 679px);
+    @include flexCustom(column, center, flex-start);
+    #labels {
+      @include customWidthHeight($content-web-width, 118.17px);
+      @include flexCustom(row, stretch, space-between);
+      margin-top: 128.13px;
+      p {
+        @include customWidthHeight(123.51px, 100%);
+        @include zeroMarginPadding();
+        @include boldFondSet();
+        font-size: 47px;
+        line-height: 59px;
+      }
+      .brief {
+        @include flexCustom(row, flex-end, flex-start);
+        h3 {
+          @include zeroMarginPadding();
+          @include lightFontSet();
+          margin-bottom: 12px;
+        }
+      }
+      .lang {
+        height: 118.17px;
+        @include flexCustom(row, flex-end, flex-start);
+        transform: rotateZ(-90deg);
+        h3 {
+          margin-right: 30px;
+          margin-bottom: 12px;
+          a {
+            @include links();
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    #image-container {
+      @include customWidthHeight($content-web-width, 387px);
+      margin-top: 30.64px;
+    }
+    #image {
+      @include customWidthHeight(100%, 100%);
+    }
+    #image-mobile {
+      display: none;
+    }
+  }
+}
+
+#about {
+  @include customWidthHeight(100%, 506px);
+  @include flexCustom(column, center, flex-end);
+  text-align: center;
+  background-color: $secondary-background-color;
+}
+
+#skills {
+  @include customWidthHeight(100%, 610px);
+  @include flexCustom(column, center, flex-start);
+  background-color: $primary-background-color;
+  text-align: center;
+  .text-container {
+    @include customWidthHeight(
+      100%,
+      83.49px + 22px // margin to the icons plus text line height
+    );
+    h3 {
+      @include lightFontSet();
+    }
+  }
+  .progs {
+    @include customWidthHeight($content-web-width, 206.27px);
+    @include flexCustom(row, flex-start, space-between);
+    padding-bottom: 110.06px - 68px;
+    .prog {
+      @include customWidthHeight(166px, 100%);
+      @include flexCustom(column, center, flex-end);
+      .logo {
+        @include customWidthHeight(89.07px, 88.41px);
+      }
+      .prog-name {
+        @include lightFontSet();
+        color: $secondary-text-color;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+      }
+      .star-holder {
+        @include customWidthHeight(100%, 26px);
+        .star {
+          @include customWidthHeight(26.07px, 26px);
+        }
+      }
+    }
+  }
+}
+
+// CHECK CHECK
+.text-container {
+  @include customWidthHeight(485px, 218px);
+  margin-top: 17.69px;
+}
+
+.text {
+  color: $primary-text-color;
+  @include zeroMarginPadding();
+  @include lightFontSet();
+}
+
+#portfolio {
+  @include customWidthHeight(100%, 2253px);
+  @include flexCustom(column, center, center);
+  background-color: $secondary-background-color;
+  text-align: center;
+  .portfolio-container {
+    @include customWidthHeight(
+      936.24px,
+      510px + 44.88px + 22px
+    ); // image height plus image and text space plus text's height
+    margin-top: 47px; // from portfolio title
+    margin-bottom: 166px - (47px + 44.88px); // spec difference between 2 images minus marginTop and text height
+
+    .item {
+      @include customWidthHeight(100%, 510px);
+    }
+    .item:hover {
+      opacity: 0.6;
+      transition: all 0.3s ease-in-out;
+    }
+    h4 {
+      @include zeroMarginPadding();
+      @include lightFontSet();
+      color: $primary-text-color;
+      margin-top: 44.88px;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      @include links();
+      color: $primary-text-color;
+    }
+    h4:hover {
+      transition: all 0.3s ease-in-out;
+      font-size: 19px;
+      color: $secondary-text-color;
+    }
+  }
+}
+#contacts {
+  @include customWidthHeight(100%, 700px);
+  @include flexCustom(column, center, center);
+  background-color: $primary-background-color;
+  text-align: center;
+  h3 {
+    @include lightFontSet();
+    margin-top: 52px;
+    color: $primary-text-color;
+  }
+  button {
+    @include customWidthHeight(180.5px, 42px);
+    @include lightFontSet();
+    color: $primary-background-color;
+    background-color: $primary-text-color;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    outline: none;
+  }
+  button:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: $secondary-text-color;
+  }
+  .icons-container {
+    @include customWidthHeight(342.18px, 40.92px);
+    @include flexCustom(row, stretch, space-between);
+    margin-top: 85.78px;
+    .contact {
+      @include customWidthHeight(40.17px, 40.06px);
+    }
+  }
+  h4 {
+    @include lightFontSet();
+    margin-top: 45.16px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $secondary-text-color;
+
+    a {
+      text-decoration: none;
+      color: $secondary-text-color;
+    }
+    a:visited {
+      @include links();
+      color: $secondary-text-color;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+// screenwidth between 975px and 640 (tablets)
+@media only screen and (max-width: 975px) {
+  body {
+    @include customWidthHeight(100vw, 3759px);
+  }
+  #nav-box {
+    .nav-web {
+      display: none;
+    }
+    .nav-mobile {
+      display: inline;
+      @include customWidthHeight(45px, 50px);
+      hr {
+        margin-top: 11px;
+      }
+    }
+  }
+  #home {
+    #home-holder {
+      #labels {
+        @include customWidthHeight($content-tablet-width, 118.17px);
+      }
+      #image-container {
+        @include customWidthHeight($content-tablet-width, 387px);
+      }
+      #image {
+        @include customWidthHeight(100%, 75%);
+      }
+    }
+  }
+  #skills {
+    .progs {
+      @include customWidthHeight($content-tablet-width, 206.27px);
+      .prog {
+        .star-holder {
+          .star {
+            @include customWidthHeight(18.07px, 18px);
+          }
+        }
+      }
+    }
+  }
+  #portfolio {
+    @include customWidthHeight(100%, 1850px);
+    .portfolio-container {
+      @include customWidthHeight($content-tablet-width, 350px + 44.88px + 22px);
+      margin-top: 47px;
+      .item {
+        @include customWidthHeight(100%, 350px);
+      }
+    }
+  }
+}
+
+// screenwidth less than 640px (smaller tablets and mobile)
+@media only screen and (max-width: 640px) {
+  #nav-box {
+    @include customWidthHeight($content-tablet-width, 0);
+    .nav-mobile {
+      background-color: $primary-background-color;
+      @include customWidthHeight(40px, 45px);
+      hr {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  #home {
+    @include customWidthHeight(100%, 850px);
+    #home-holder {
+      @include customWidthHeight(100%, 100%);
+      @include flexCustom(column, center, flex-start);
+      #labels {
+        @include customWidthHeight(
+          $content-mobile-width - $mobile-container-margin,
+          250px
+        );
+        @include flexCustom(column, flex-start, flex-start);
+        margin-top: 50px + 25px;
+        .lang {
+          transform: rotateZ(0deg);
+        }
+      }
+      #image-container {
+        @include customWidthHeight(
+          $content-mobile-width - $mobile-container-margin,
+          478px
+        );
+      }
+      #image {
+        display: none;
+      }
+      #image-mobile {
+        display: inline;
+        @include customWidthHeight(100%, 100%);
+      }
+    }
+  }
+
+  #about {
+    @include customWidthHeight(100%, 506px);
+    @include flexCustom(column, center, flex-end);
+    text-align: center;
+    background-color: $secondary-background-color;
+    .text-container {
+      @include customWidthHeight(
+        $content-mobile-width - $mobile-container-margin,
+        auto
+      );
+    }
+  }
+
+  #skills {
+    @include customWidthHeight(100%, auto);
+    .progs {
+      @include customWidthHeight(
+        $content-mobile-width - $mobile-container-margin,
+        auto
+      );
+      @include flexCustom(column, center, center);
+      padding-bottom: 0;
+      .prog {
+        .star-holder {
+          margin-bottom: 50px;
+          .star {
+            @include customWidthHeight(26.07px, 26px);
+          }
+        }
+      }
+    }
+  }
+  #portfolio {
+    @include customWidthHeight(100%, auto);
+    .portfolio-container {
+      @include customWidthHeight(
+        $content-mobile-width - $mobile-container-margin,
+        350px
+      );
+      margin-bottom: 0;
+      .item {
+        @include customWidthHeight(100%, 220px);
+      }
+      h4 {
+        margin-top: 20px;
+      }
+    }
+  }
+  #contacts {
+    @include customWidthHeight(100%, 690px);
+    button {
+      @include customWidthHeight(
+        $content-mobile-width - $mobile-container-margin,
+        42px
+      );
+    }
+    .icons-container {
+      @include customWidthHeight(
+        $content-mobile-width - $mobile-container-margin,
+        auto
+      );
+    }
+  }
+}

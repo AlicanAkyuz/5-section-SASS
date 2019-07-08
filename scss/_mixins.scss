@@ -1,0 +1,58 @@
+@import "./variables";
+
+// all zero margin and padding
+@mixin zeroMarginPadding {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+// custom width and height
+@mixin customWidthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//
+@mixin lightFontSet() {
+  font-family: $font;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+//
+@mixin links() {
+  @include lightFontSet();
+  color: $secondary-text-color;
+  text-decoration: none;
+}
+
+//
+@mixin boldFondSet() {
+  font-family: $font;
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 700;
+}
+
+// titles
+@mixin titles() {
+  color: $primary-text-color;
+  @include boldFondSet();
+  @include zeroMarginPadding();
+  margin-top: 112px;
+}
+
+// custom width and height
+@mixin flexCenterSet() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// custom width and height
+@mixin flexCustom($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
