@@ -193,7 +193,7 @@ body {
 
 #home #home-holder #labels {
   width: 940.6px;
-  height: 100.56px;
+  height: 109.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,7 +248,6 @@ body {
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
-  margin-bottom: 12px;
 }
 
 #home #home-holder #labels .lang {

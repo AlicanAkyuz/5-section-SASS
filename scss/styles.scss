@@ -115,7 +115,7 @@ body {
       // field for name, brief and language links
       @include customWidthHeight(
         $content-web-width,
-        $home-image-to-nav-height - $navbar-height
+        $home-image-to-nav-height - 79px
       );
       @include flexCustom(row, stretch, space-between);
       margin-top: $home-name-to-top-margin;
@@ -132,8 +132,6 @@ body {
         h3 {
           @include zeroMarginPadding();
           @include lightFontSet();
-          // override zero-margin
-          margin-bottom: 12px;
         }
       }
       .lang {
