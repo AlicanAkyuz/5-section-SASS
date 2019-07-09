@@ -2,27 +2,31 @@
 @import "./variables";
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; // allow scrool behavior
 }
 
 body {
-  @include customWidthHeight(100vw, 4759px);
+  @include customWidthHeight(100vw, 4759px); // height specified in the spec
   @include zeroMarginPadding();
 }
+
 #nav-box {
-  @include customWidthHeight(100%, 87.94px);
+  @include customWidthHeight(100%, $navbar-height);
   @include flexCenterSet();
-  position: fixed;
+  background-color: $primary-background-color;
+  position: fixed; // fix navbar to the top
   top: 0;
   .nav-web {
-    @include customWidthHeight($content-web-width, 87.94px);
-    @include flexCenterSet();
-    border-bottom: 1px solid #828282;
-    background-color: $primary-background-color;
+    @include customWidthHeight($content-web-width, $navbar-height);
+    border-bottom: 1px solid #828282; // draw navbar bottom line
     ul {
       @include customWidthHeight(100%, 100%);
-      @include zeroMarginPadding();
-      @include flexCustom(row, center, space-between);
+      @include zeroMarginPadding(); // prevent default margins and paddings
+      @include flexCustom(
+        row,
+        center,
+        space-between
+      ); // spread navbar list items
       list-style-type: none;
       a {
         @include links();
@@ -30,6 +34,7 @@ body {
       a:active {
         color: $primary-text-color;
       }
+      // bold the current division's name — functionality remains for javaScript :)
       .home-link {
         color: $primary-text-color;
         font-weight: 700;
@@ -37,9 +42,9 @@ body {
     }
   }
   .nav-mobile {
-    display: none;
+    display: none; // hide mobile navbar unless screen width <= 940.6px
     @include customWidthHeight(70px, 75px);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e0e0e0; // draw a navigation button fixed to the left
     position: fixed;
     top: 0;
     left: 0;
@@ -60,10 +65,11 @@ body {
       content: none;
     }
     #toggle:checked ~ ul {
+      // toggle navigation button in tablets and mobile devices
       @include customWidthHeight(150px, 200px);
       @include zeroMarginPadding();
       @include flexCustom(column, center, space-between);
-      transition: margin 700ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      transition: margin 700ms cubic-bezier(0.17, 0.04, 0.03, 0.94); // sliding in effect
       text-align: center;
       list-style-type: none;
       background-color: $primary-background-color;
@@ -84,146 +90,169 @@ body {
     }
   }
 }
-
+// navbar landing spot for each division on the page
 #navbar-landing {
-  @include customWidthHeight(100%, 87.94px);
+  @include customWidthHeight(100%, $navbar-height);
   transition: all 0.5s ease-in-out;
 }
 
+// styles for division titles as well as bold name in home division
 #titles {
   @include titles();
 }
 
+// home division
 #home {
-  @include customWidthHeight(100%, 768px);
+  @include customWidthHeight(100%, $home-division-height);
   background-color: $primary-background-color;
   #home-holder {
-    @include customWidthHeight(100%, 679px);
+    @include customWidthHeight(
+      100%,
+      $home-division-height - $navbar-height
+    ); // home division's height minus navbar's height
     @include flexCustom(column, center, flex-start);
     #labels {
-      @include customWidthHeight($content-web-width, 118.17px);
+      // field for name, brief and language links
+      @include customWidthHeight(
+        $content-web-width,
+        $home-image-to-nav-height - $navbar-height
+      );
       @include flexCustom(row, stretch, space-between);
-      margin-top: 128.13px;
+      margin-top: $home-name-to-top-margin;
       p {
         @include customWidthHeight(123.51px, 100%);
-        @include zeroMarginPadding();
-        @include boldFondSet();
+        @include titles();
+        // override some title values
         font-size: 47px;
         line-height: 59px;
+        @include zeroMarginPadding();
       }
       .brief {
         @include flexCustom(row, flex-end, flex-start);
         h3 {
           @include zeroMarginPadding();
           @include lightFontSet();
+          // override zero-margin
           margin-bottom: 12px;
         }
       }
       .lang {
         height: 118.17px;
         @include flexCustom(row, flex-end, flex-start);
+        // rotate language links' division vertically
         transform: rotateZ(-90deg);
         h3 {
           margin-right: 30px;
           margin-bottom: 12px;
           a {
             @include links();
+            // override some links' values
             font-size: 16px;
             line-height: 20px;
+          }
+          .eng {
+            // bold the current languages name — functionality remains for JS
+            color: $primary-text-color;
+            font-weight: 700;
           }
         }
       }
     }
     #image-container {
-      @include customWidthHeight($content-web-width, 387px);
-      margin-top: 30.64px;
+      @include customWidthHeight($content-web-width, $home-image-web-height);
+      margin-top: $home-image-to-text-margin;
     }
     #image {
       @include customWidthHeight(100%, 100%);
     }
     #image-mobile {
-      display: none;
+      display: none; // hide vertical image unless screen width <= 420px
     }
   }
 }
 
+// about division
 #about {
-  @include customWidthHeight(100%, 506px);
+  @include customWidthHeight(100%, $about-height);
   @include flexCustom(column, center, flex-end);
   text-align: center;
   background-color: $secondary-background-color;
+  .text-container {
+    @include customWidthHeight(
+      $about-text-container-width,
+      $about-text-container-height
+    );
+    margin-top: 17.69px;
+    .text {
+      color: $primary-text-color;
+      @include lightFontSet();
+    }
+  }
 }
 
+// skills division
 #skills {
-  @include customWidthHeight(100%, 610px);
+  @include customWidthHeight(100%, $skills-height);
   @include flexCustom(column, center, flex-start);
   background-color: $primary-background-color;
   text-align: center;
   .text-container {
     @include customWidthHeight(
       100%,
-      83.49px + 22px // margin to the icons plus text line height
+      $skills-text-to-icon-height // margin to the icons plus text line height
     );
     h3 {
       @include lightFontSet();
     }
   }
   .progs {
-    @include customWidthHeight($content-web-width, 206.27px);
+    @include customWidthHeight(
+      $content-web-width,
+      $skills-icon-container-height
+    );
     @include flexCustom(row, flex-start, space-between);
-    padding-bottom: 110.06px - 68px;
+    padding-bottom: $skills-icon-container-to-bottom-margin - 68px;
     .prog {
-      @include customWidthHeight(166px, 100%);
+      @include customWidthHeight($skills-icon-container-width, 100%);
       @include flexCustom(column, center, flex-end);
       .logo {
-        @include customWidthHeight(89.07px, 88.41px);
+        @include customWidthHeight($skills-logo-width, $skills-logo-height);
       }
       .prog-name {
         @include lightFontSet();
         color: $secondary-text-color;
+        // override some light font values
         font-size: 14px;
         line-height: 17px;
-        text-align: center;
       }
       .star-holder {
-        @include customWidthHeight(100%, 26px);
+        @include customWidthHeight(100%, $skills-stars);
         .star {
-          @include customWidthHeight(26.07px, 26px);
+          @include customWidthHeight($skills-stars, $skills-stars);
         }
       }
     }
   }
 }
 
-// CHECK CHECK
-.text-container {
-  @include customWidthHeight(485px, 218px);
-  margin-top: 17.69px;
-}
-
-.text {
-  color: $primary-text-color;
-  @include zeroMarginPadding();
-  @include lightFontSet();
-}
-
+// portfolio division
 #portfolio {
-  @include customWidthHeight(100%, 2253px);
+  @include customWidthHeight(100%, $portfolio-height);
   @include flexCustom(column, center, center);
   background-color: $secondary-background-color;
   text-align: center;
   .portfolio-container {
     @include customWidthHeight(
-      936.24px,
-      510px + 44.88px + 22px
-    ); // image height plus image and text space plus text's height
+      $portfolio-item-width,
+      $portfolio-item-height + 44.88px + 22px
+    ); // image height + image and text space + text's height
     margin-top: 47px; // from portfolio title
     margin-bottom: 166px - (47px + 44.88px); // spec difference between 2 images minus marginTop and text height
-
     .item {
       @include customWidthHeight(100%, 510px);
     }
     .item:hover {
+      // transition effect on image hover
       opacity: 0.6;
       transition: all 0.3s ease-in-out;
     }
@@ -234,7 +263,6 @@ body {
       margin-top: 44.88px;
       text-decoration: underline;
     }
-
     a:visited {
       @include links();
       color: $primary-text-color;
@@ -246,48 +274,51 @@ body {
     }
   }
 }
+// contacts division
 #contacts {
-  @include customWidthHeight(100%, 700px);
+  @include customWidthHeight(100%, $contacts-height);
   @include flexCustom(column, center, center);
   background-color: $primary-background-color;
   text-align: center;
   h3 {
     @include lightFontSet();
-    margin-top: 52px;
+    margin-top: $contacts-text-to-title-height;
     color: $primary-text-color;
   }
   button {
-    @include customWidthHeight(180.5px, 42px);
+    @include customWidthHeight($contacts-button-width, $contacts-button-height);
     @include lightFontSet();
     color: $primary-background-color;
     background-color: $primary-text-color;
     border-radius: 25px;
     cursor: pointer;
     border: none;
+    outline: none;
     -webkit-appearance: button;
     -moz-appearance: button;
-    outline: none;
   }
   button:hover {
     transition: all 0.2s ease-in-out;
     background-color: $secondary-text-color;
   }
   .icons-container {
-    @include customWidthHeight(342.18px, 40.92px);
+    @include customWidthHeight(
+      $contacts-icons-container-width,
+      $contacts-icons-container-height
+    );
     @include flexCustom(row, stretch, space-between);
-    margin-top: 85.78px;
+    margin-top: $contacts-icons-to-button-margin;
     .contact {
-      @include customWidthHeight(40.17px, 40.06px);
+      @include customWidthHeight($contacts-icons-size, $contacts-icons-size);
     }
   }
   h4 {
     @include lightFontSet();
-    margin-top: 45.16px;
+    margin-top: $contacts-links-to-icons-margin;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     color: $secondary-text-color;
-
     a {
       text-decoration: none;
       color: $secondary-text-color;
@@ -300,13 +331,13 @@ body {
 }
 
 // MEDIA QUERIES
-
 // screenwidth between 975px and 640 (tablets)
 @media only screen and (max-width: 975px) {
   body {
     @include customWidthHeight(100vw, 3759px);
   }
   #nav-box {
+    background-color: transparent;
     .nav-web {
       display: none;
     }
@@ -367,7 +398,6 @@ body {
       }
     }
   }
-
   #home {
     @include customWidthHeight(100%, 850px);
     #home-holder {
@@ -381,6 +411,7 @@ body {
         @include flexCustom(column, flex-start, flex-start);
         margin-top: 50px + 25px;
         .lang {
+          // re-rotate language links
           transform: rotateZ(0deg);
         }
       }
@@ -399,7 +430,6 @@ body {
       }
     }
   }
-
   #about {
     @include customWidthHeight(100%, 506px);
     @include flexCustom(column, center, flex-end);
@@ -412,7 +442,6 @@ body {
       );
     }
   }
-
   #skills {
     @include customWidthHeight(100%, auto);
     .progs {

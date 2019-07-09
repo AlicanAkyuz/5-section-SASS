@@ -1,17 +1,17 @@
 @import "./variables";
 
-// all zero margin and padding
+// all-zero margin and padding
 @mixin zeroMarginPadding {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
 }
-// custom width and height
+// custom width and height group
 @mixin customWidthHeight($width, $height) {
   width: $width;
   height: $height;
 }
 
-//
+// light font set for explanatory texts
 @mixin lightFontSet() {
   font-family: $font;
   font-size: 18px;
@@ -19,37 +19,31 @@
   font-weight: 400;
 }
 
-//
+// light font set for anchor tags
 @mixin links() {
   @include lightFontSet();
   color: $secondary-text-color;
   text-decoration: none;
 }
 
-//
-@mixin boldFondSet() {
+// bold font set for division names
+@mixin titles() {
   font-family: $font;
   font-size: 34px;
   line-height: 42px;
   font-weight: 700;
-}
-
-// titles
-@mixin titles() {
-  color: $primary-text-color;
-  @include boldFondSet();
-  @include zeroMarginPadding();
   margin-top: 112px;
+  color: $primary-text-color;
 }
 
-// custom width and height
+// center-set flex group
 @mixin flexCenterSet() {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-// custom width and height
+// custom flex group
 @mixin flexCustom($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;

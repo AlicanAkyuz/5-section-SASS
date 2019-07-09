@@ -1,13 +1,58 @@
+// global variables as specified in the spec
+
+// Gilroy-Medium and Gilroy-Bold are premium fonts. For the purposes of this task, I used Lato with 400 and 700 weight.
 $font: "Lato", sans-serif;
 
+// text colors
 $primary-text-color: #070707;
 $secondary-text-color: #828282;
 
+// background colors
 $primary-background-color: #ffffff;
 $secondary-background-color: #f6f6f6;
 
+// widths and heights
 $content-web-width: 940.6px;
 $content-tablet-width: 640px;
-
 $content-mobile-width: 420px;
-$mobile-container-margin: 100px;
+
+$navbar-height: 87.94px;
+$home-division-height: 768px;
+$home-image-to-nav-height: 188.5px;
+$home-image-web-height: 387px;
+
+$about-height: 506px;
+$about-text-container-height: 218px;
+$about-text-container-width: 485.34px;
+
+$skills-height: 610px;
+$skills-text-to-icon-height: 83.49px;
+$skills-icon-container-height: 206.27px;
+$skills-icon-container-width: 166px;
+$skills-logo-width: 89.21px;
+$skills-logo-height: 88.57px;
+$skills-stars: 26px;
+
+$portfolio-height: 2253px;
+$portfolio-item-height: 510px;
+$portfolio-item-width: 936.24px;
+
+$contacts-height: 622px;
+$contacts-text-to-title-height: 20px;
+$contacts-button-width: 180.5px;
+$contacts-button-height: 42px;
+$contacts-icons-container-width: 342.18px;
+$contacts-icons-container-height: 40.92px;
+$contacts-icons-size: 40.06px;
+
+// margins and paddings
+$home-name-to-top-margin: 128.13px;
+$home-image-to-text-margin: 30.64px;
+
+$skills-icon-container-to-bottom-margin: 110.06px;
+
+$contacts-icons-to-button-margin: 85.78px;
+$contacts-links-to-icons-margin: 45.16px;
+
+// mobile specifications
+$mobile-container-margin: 100px; // margin from the screen width for content containers in mobile devices

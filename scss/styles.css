@@ -5,8 +5,8 @@ html {
 body {
   width: 100vw;
   height: 4759px;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 #nav-box {
@@ -21,6 +21,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #ffffff;
   position: fixed;
   top: 0;
 }
@@ -28,24 +29,14 @@ body {
 #nav-box .nav-web {
   width: 940.6px;
   height: 87.94px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-bottom: 1px solid #828282;
-  background-color: #ffffff;
 }
 
 #nav-box .nav-web ul {
   width: 100%;
   height: 100%;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,8 +106,8 @@ body {
 #nav-box .nav-mobile #toggle:checked ~ ul {
   width: 150px;
   height: 200px;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,14 +159,12 @@ body {
 }
 
 #titles {
-  color: #070707;
   font-family: "Lato", sans-serif;
   font-size: 34px;
   line-height: 42px;
   font-weight: 700;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
   margin-top: 112px;
+  color: #070707;
 }
 
 #home {
@@ -186,7 +175,7 @@ body {
 
 #home #home-holder {
   width: 100%;
-  height: 679px;
+  height: 680.06px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +193,7 @@ body {
 
 #home #home-holder #labels {
   width: 940.6px;
-  height: 118.17px;
+  height: 100.56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,14 +213,16 @@ body {
 #home #home-holder #labels p {
   width: 123.51px;
   height: 100%;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
   font-family: "Lato", sans-serif;
   font-size: 34px;
   line-height: 42px;
   font-weight: 700;
+  margin-top: 112px;
+  color: #070707;
   font-size: 47px;
   line-height: 59px;
+  margin: 0;
+  padding: 0;
 }
 
 #home #home-holder #labels .brief {
@@ -251,8 +242,8 @@ body {
 }
 
 #home #home-holder #labels .brief h3 {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
   font-family: "Lato", sans-serif;
   font-size: 18px;
   line-height: 22px;
@@ -295,6 +286,11 @@ body {
   line-height: 20px;
 }
 
+#home #home-holder #labels .lang h3 .eng {
+  color: #070707;
+  font-weight: 700;
+}
+
 #home #home-holder #image-container {
   width: 940.6px;
   height: 387px;
@@ -330,6 +326,20 @@ body {
   background-color: #f6f6f6;
 }
 
+#about .text-container {
+  width: 485.34px;
+  height: 218px;
+  margin-top: 17.69px;
+}
+
+#about .text-container .text {
+  color: #070707;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
 #skills {
   width: 100%;
   height: 610px;
@@ -352,7 +362,7 @@ body {
 
 #skills .text-container {
   width: 100%;
-  height: 105.49px;
+  height: 83.49px;
 }
 
 #skills .text-container h3 {
@@ -400,8 +410,8 @@ body {
 }
 
 #skills .progs .prog .logo {
-  width: 89.07px;
-  height: 88.41px;
+  width: 89.21px;
+  height: 88.57px;
 }
 
 #skills .progs .prog .prog-name {
@@ -412,7 +422,6 @@ body {
   color: #828282;
   font-size: 14px;
   line-height: 17px;
-  text-align: center;
 }
 
 #skills .progs .prog .star-holder {
@@ -421,24 +430,8 @@ body {
 }
 
 #skills .progs .prog .star-holder .star {
-  width: 26.07px;
+  width: 26px;
   height: 26px;
-}
-
-.text-container {
-  width: 485px;
-  height: 218px;
-  margin-top: 17.69px;
-}
-
-.text {
-  color: #070707;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 400;
 }
 
 #portfolio {
@@ -480,8 +473,8 @@ body {
 }
 
 #portfolio .portfolio-container h4 {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+  margin: 0;
+  padding: 0;
   font-family: "Lato", sans-serif;
   font-size: 18px;
   line-height: 22px;
@@ -510,7 +503,7 @@ body {
 
 #contacts {
   width: 100%;
-  height: 700px;
+  height: 622px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,7 +526,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
-  margin-top: 52px;
+  margin-top: 20px;
   color: #070707;
 }
 
@@ -549,9 +542,9 @@ body {
   border-radius: 25px;
   cursor: pointer;
   border: none;
+  outline: none;
   -webkit-appearance: button;
   -moz-appearance: button;
-  outline: none;
 }
 
 #contacts button:hover {
@@ -580,7 +573,7 @@ body {
 }
 
 #contacts .icons-container .contact {
-  width: 40.17px;
+  width: 40.06px;
   height: 40.06px;
 }
 
@@ -615,6 +608,9 @@ body {
   body {
     width: 100vw;
     height: 3759px;
+  }
+  #nav-box {
+    background-color: transparent;
   }
   #nav-box .nav-web {
     display: none;

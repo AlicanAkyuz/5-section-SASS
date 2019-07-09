@@ -2,20 +2,21 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title>Denis Novik</title>
-    <link rel="shortcut icon" href="./images/denis.ico">
+    <title>Denis Novik — UX | UI</title>
+    
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="scss/styles.css" />
-
     <meta name="theme-color" content="#fafafa" />
 
+    <link rel="shortcut icon" href="./images/denis.ico">
+    <link rel="stylesheet" href="scss/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <!-- navbar — as head to every following division -->
     <div id="nav-box">
+      <!-- navbar for tablets and mobile devices -->
         <div class="nav-mobile">
           <input type="checkbox" name="toggle" id="toggle" />
           <label for="toggle">
@@ -31,72 +32,72 @@
             <li><a href="#contacts">Contacts</a></li>
           </ul>
         </div> 
-
-
-      <div class="nav-web">
-        <ul>
-          <li>
-             <a href="#" class="home-link">Home</a>
-            </li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-        </ul>
-      </div> 
+        <!-- navbar for web -->
+        <div class="nav-web">
+          <ul>
+            <li>
+              <a href="#" class="home-link">Home</a>
+              </li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div> 
     </div>
     
+    <!-- HOME DIVISION -->
     <div id="home">
+      <!-- navbar landing spot in home division -->
       <a name="#"></a>  
       <div id="home-holder">
-        
+      <!-- home division text area -->
         <div id="labels">
-            <p>Denis Novik</p>
-            <div class="brief">
-                <h3>UX | UI designer </br>
-                  24 years old, Minsk</h3>
-            </div>
-            <div class="lang">
-                <h3> 
-                  <a href="#ru">RU </a>| 
-                  <a href="#eng">ENG </a>
-                </h3>
-            </div>   
+          <p>Denis Novik</p>
+          <div class="brief">
+            <h3>UX | UI designer </br>24 years old, Minsk</h3>
+          </div>
+          <div class="lang">
+            <h3> 
+              <a href="#ru">RU </a>| 
+              <a href="#eng" class="eng">ENG </a>
+            </h3>
+          </div>   
         </div>
-
+        <!-- home division image area -->
         <div id="image-container">
+          <!-- wide image for web and tablets -->
           <img id="image" src="./images/denis.png" alt="Denis taking their hat off" />
+          <!-- tall image for mobile -->
           <img id="image-mobile" src="./images/denis-vertical.png" alt="Denis taking their hat off" />
         </div>       
       </div>
-
-      <!-- landing point for nav bar -->
+      <!-- navbar landing spot for about division -->
       <a name="about"></a>
       <div id="navbar-landing"></div> 
     </div>
 
       
-
+    <!-- ABOUT DIVISION -->
     <div id="about">
       <h1 id="titles">About Me</h1>
       <div class="text-container">
-          <h3 class="text">
-              Hi, I'm Denis – UX/UI designer from Minsk. </br>
-              I'm interested in design and everything connected with it. </br></br>
-              I'm studying at courses "Web and mobile
-              design interfaces" in IT-Academy. </br></br>
-              Ready to implement excellent projects</br>
-              with wonderful people.
-            </h3>
+        <h3 class="text">
+            Hi, I'm Denis – UX/UI designer from Minsk. </br>
+            I'm interested in design and everything connected with it. </br></br>
+            I'm studying at courses "Web and mobile
+            design interfaces" in IT-Academy. </br></br>
+            Ready to implement excellent projects</br>
+            with wonderful people.
+        </h3>
       </div>
-
-      <!-- landing point for nav bar -->
+      <!-- navbar landing spot for skills division -->
       <a name="skills"></a>
       <div id="navbar-landing"> 
       </div> 
     </div>
 
-
+    <!-- SKILLS DIVISION -->
     <div id="skills"> 
       <h1 id="titles">Skills</h1>
       <div class="text-container">
@@ -104,119 +105,121 @@
             I work in such programs as
         </h3>
       </div>
+      <!-- skills/programs container -->
       <div class="progs">
+        <!-- single skill/program container -->
         <div class="prog">
-            <img class="logo" src="./images/skills/ps.png" alt="adobe photoshop" />
-            <h5 class="prog-name">
-              Adobe 
-              </br> 
-              Photoshop
-            </h5> 
-            <div class="star-holder">
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
-            </div>
-            
+          <!-- program image -->
+          <img class="logo" src="./images/skills/ps.png" alt="adobe photoshop" />
+          <h5 class="prog-name">
+            Adobe </br> Photoshop
+          </h5> 
+          <!-- program stars -->
+          <div class="star-holder">
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
+          </div>    
         </div>
+        <!-- single skill/program container -->
         <div class="prog">
-            <img class="logo" src="./images/skills/ai.png" alt="adone illustrator" />
-            <h5 class="prog-name">
-                Adobe 
-                </br> 
-                Illustrator
-            </h5>
-            <div class="star-holder">
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
-                <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
-            </div>
+          <!-- program image -->
+          <img class="logo" src="./images/skills/ai.png" alt="adone illustrator" />
+          <h5 class="prog-name">Adobe </br> Illustrator
+          </h5>
+          <!-- program stars -->
+          <div class="star-holder">
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
+            <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
+          </div>
         </div>
+        <!-- single skill/program container -->
         <div class="prog">
-            <img class="logo" src="./images/skills/ae.png" alt="adobe after effects" />
-            <h5 class="prog-name">
-                Adobe 
-                </br> 
-                After Effects
-            </h5>
-            <div class="star-holder">
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
-            </div>
+          <!-- program image -->
+          <img class="logo" src="./images/skills/ae.png" alt="adobe after effects" />
+          <h5 class="prog-name">Adobe </br> After Effects
+          </h5>
+          <!-- program stars -->
+          <div class="star-holder">
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
+          </div>
         </div>
+        <!-- single skill/program container -->
         <div class="prog">
-            <img class="logo" src="./images/skills/figma.png" alt="figma" />
-            <h5 class="prog-name">
-                Figma
-            </h5>
+          <!-- program image -->
+          <img class="logo" src="./images/skills/figma.png" alt="figma" />
+          <h5 class="prog-name">Figma</h5>
           </br>
-            <div class="star-holder">
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-black.png" alt="black star" />
-                <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
-            </div>
+          <!-- program stars -->
+          <div class="star-holder">
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-black.png" alt="black star" />
+            <img class="star" src="./images/icons/star-gray.png" alt="gray star" />
+          </div>
         </div>     
       </div> 
-
-      <!-- landing point for nav bar -->
+      <!-- navbar landing spot for portfolio division -->
       <a name="portfolio"></a>
-      <div id="navbar-landing"> 
-      </div> 
-      
+      <div id="navbar-landing"></div> 
     </div> 
 
     
-
-   <div id="portfolio"> 
-        <h1 id="titles">Portfolio</h1>
-
-        <div class="portfolio-container">
-            <a href="https://google.com" target="_blank"
-            rel="noopener noreferrer">
-                <img class="item" src="./images/portfolio/fashion-store.png" alt="fashion store landing page" />
-                <h4>Online Fashion Store - Homepage</h4>
-            </a>
-            
-        </div> 
-        <div class="portfolio-container">
-            <a href="https://google.com" target="_blank"
-            rel="noopener noreferrer">
-              <img class="item" src="./images/portfolio/reebok.png" alt="reebok store page" />
-              <h4>Reebok Store - Concept</h4>
-            </a>
-        </div>
-        <div class="portfolio-container">
-            <a href="https://google.com" target="_blank"
-            rel="noopener noreferrer">
-              <img class="item" src="./images/portfolio/braun.png" alt="braun landing page" />
-              <h4>Braun Landing Page - Concept</h4>
-            </a>
-        </div> 
-
-
-        <!-- landing point for nav bar -->
-     <a name="contacts"></a>
+    <!-- PORTFOLIO DIVISION -->
+    <div id="portfolio"> 
+      <h1 id="titles">Portfolio</h1>
+      <!-- 1st single portfolio item container -->
+      <div class="portfolio-container">
+        <!-- wrap image and name in anchor tag -->
+        <a href="https://google.com" target="_blank"
+        rel="noopener noreferrer">
+          <img class="item" src="./images/portfolio/fashion-store.png" alt="fashion store landing page" />
+          <h4>Online Fashion Store - Homepage</h4>
+        </a> 
+      </div> 
+      <!-- 2nd single portfolio item container -->
+      <div class="portfolio-container">
+        <!-- wrap image and name in anchor tag -->
+        <a href="https://google.com" target="_blank"
+        rel="noopener noreferrer">
+          <img class="item" src="./images/portfolio/reebok.png" alt="reebok store page" />
+          <h4>Reebok Store - Concept</h4>
+        </a>
+      </div>
+      <!-- 3rd single portfolio item container -->
+      <div class="portfolio-container">
+        <!-- wrap image and name in anchor tag -->
+        <a href="https://google.com" target="_blank"
+        rel="noopener noreferrer">
+          <img class="item" src="./images/portfolio/braun.png" alt="braun landing page" />
+          <h4>Braun Landing Page - Concept</h4>
+        </a>
+      </div> 
+      <!-- navbar landing spot for contact division -->
+      <a name="contacts"></a>
       <div id="navbar-landing"> 
       </div> 
     </div>  
 
 
-
+    <!-- CONTACTS DIVISION -->
     <div id="contacts">
       <h1 id="titles">Contacts</h1>
       <h3>Want to know more or just chat?</br>You are welcome! </h3>
+      <!-- message button -->
       <button type="submit">Send Message</button>
+      <!-- social media items container -->
       <div class="icons-container">
-
         <a href="https://linkedin.com" target="_blank"
           rel="noopener noreferrer">
             <img class="contact" src="./images/contacts/linkedin.png" alt="linkedin logo" />
@@ -234,6 +237,7 @@
           <img class="contact" src="./images/contacts/dribble.png" alt="dribble logo" />
         </a>         
       </div>
+      <!-- social media items texts -->
       <h4>
         Like me on 
         </br>
